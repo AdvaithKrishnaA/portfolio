@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "portfolio",
+  "compatibility_date": "2026-07-09",
+  // Static-assets-only deployment: no "main" worker entry.
+  // Asset requests are served by Cloudflare's asset layer and do NOT
+  // count as Worker invocations. SPA fallback routes unknown paths to index.html.
+  "assets": {
+    "not_found_handling": "single-page-application"
+  }
+}
