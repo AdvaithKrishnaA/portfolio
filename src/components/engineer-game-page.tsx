@@ -404,7 +404,7 @@ export default function EngineerGamePage() {
     }
   }, [])
 
-  // Game loop — delta-time based so speed is identical on any refresh rate.
+  // Game loop: delta-time based so speed is identical on any refresh rate.
   useEffect(() => {
     let raf = 0
     let last = performance.now()
@@ -422,7 +422,7 @@ export default function EngineerGamePage() {
     return () => cancelAnimationFrame(raf)
   }, [update, draw])
 
-  // Controls — subscribed once; handlers read refs.
+  // Controls: subscribed once; handlers read refs.
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.code === "Space" || e.code === "ArrowUp") {

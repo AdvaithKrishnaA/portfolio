@@ -59,19 +59,25 @@ function App() {
       </a>
       <ScrollToTop />
       <SiteNav />
-      <Suspense fallback={null}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/:slug" element={<BlogPostPage />} />
-          <Route path="/parcel" element={<ParcelPage />} />
-          <Route path="/burn" element={<BurnPage />} />
-          <Route path="/ima" element={<ImaPage />} />
-          <Route path="/engineer-game" element={<EngineerGamePage />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </Suspense>
-      <SiteFooter />
+      {/* Sticky-footer layout: the route area always fills the viewport so
+          the footer never flashes at the top while a lazy chunk loads. */}
+      <div className="flex min-h-svh flex-col">
+        <div className="flex-1">
+          <Suspense fallback={<div className="min-h-svh" />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/blog/:slug" element={<BlogPostPage />} />
+              <Route path="/parcel" element={<ParcelPage />} />
+              <Route path="/burn" element={<BurnPage />} />
+              <Route path="/ima" element={<ImaPage />} />
+              <Route path="/engineer-game" element={<EngineerGamePage />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </Suspense>
+        </div>
+        <SiteFooter />
+      </div>
     </ThemeProvider>
   )
 }

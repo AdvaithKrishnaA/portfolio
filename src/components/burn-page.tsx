@@ -142,7 +142,7 @@ function Onboarding({ onDone }: { onDone: () => void }) {
 export default function BurnPage() {
   usePageMeta(
     "Burn | A Simple Way to Release Negative Thoughts",
-    "Burn helps you release negative thoughts — write them down, watch them disappear, and get back to better vibes.",
+    "Burn helps you release negative thoughts. Write them down, watch them disappear, and get back to better vibes.",
   )
   const [phase, setPhase] = useState<Phase>('onboarding')
   const [text, setText] = useState('')

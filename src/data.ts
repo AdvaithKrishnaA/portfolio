@@ -71,7 +71,7 @@ export const PROJECTS: Project[] = [
   {
     name: "Parcel",
     description:
-      "A simple app to save and share links, notes, and secrets securely",
+      "A self-hostable, end-to-end encrypted collection manager - PrivateBin on steroids",
     link: "/parcel",
     image: parcelCover,
     id: "project-parcel",
@@ -79,7 +79,7 @@ export const PROJECTS: Project[] = [
   {
     name: "Burn",
     description:
-      "Burn helps you release negative thoughts — write them down, watch them disappear, and get back to better vibes.",
+      "Burn helps you release negative thoughts. Write them down, watch them disappear, and get back to better vibes.",
     link: "/burn",
     image: burn,
     id: "project-burn",

@@ -24,7 +24,7 @@ function CarbonBadge() {
 export function SiteFooter() {
   const { pathname } = useLocation()
 
-  // Burn is a full-screen immersive experience — no site chrome.
+  // Burn is a full-screen immersive experience, so no site chrome.
   if (pathname === "/burn") return null
 
   return (

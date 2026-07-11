@@ -1,7 +1,13 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
-import { Lock, LockOpen, Puzzle, Share2, ShieldCheck } from 'lucide-react'
-import { usePageMeta } from "@/hooks/use-page-meta"
+import {
+  ShieldCheck,
+  Share2,
+  LockKeyhole,
+  Puzzle,
+} from 'lucide-react'
+
+import { usePageMeta } from '@/hooks/use-page-meta'
 
 function Logo({ className }: { className?: string }) {
   return (
@@ -17,13 +23,12 @@ function Logo({ className }: { className?: string }) {
   );
 }
 
-
 const PARCEL_BLUE = '#2563eb'
 
 const SECRET = 'wifi-pass: correct·horse·battery'
 const GLYPHS = '!<>-_\\/[]{}=+*^?#░▒▓'
 
-/** A note that scrambles itself — client-side encryption, visualised. */
+/** A note that scrambles itself: client-side encryption, visualised. */
 function EncryptDemo() {
   const [locked, setLocked] = useState(false)
   const [display, setDisplay] = useState(SECRET)
@@ -68,12 +73,12 @@ function EncryptDemo() {
           style={{ backgroundColor: `${PARCEL_BLUE}1a`, color: PARCEL_BLUE }}
           aria-hidden
         >
-          {locked ? <Lock className="size-4" /> : <LockOpen className="size-4" />}
+          <LockKeyhole className="size-4" />
         </span>
         <code className="truncate font-mono text-sm">{display}</code>
       </div>
       <p className="text-xs text-muted-foreground">
-        Locked on your device before it ever reaches the cloud.
+        Encrypted on your device before it ever reaches the server.
       </p>
     </div>
   )
@@ -92,9 +97,18 @@ const FEATURES = [
   },
   {
     icon: Puzzle,
-    title: 'Everywhere you go',
-    body: 'Save effortlessly as you browse with the companion browser extension.',
+    title: 'Browser Extension',
+    body: 'Capture links and resources directly into your secure vault as you browse.',
   },
+]
+
+const STACK = [
+  'AES-GCM 256',
+  'Argon2id',
+  'Cloudflare Workers',
+  'R2',
+  'Self-hostable',
+  'AGPL-3.0',
 ]
 
 const fadeUp = {
@@ -121,14 +135,14 @@ const githubButton = (
 
 export default function ParcelPage() {
   usePageMeta(
-    "Parcel | Secure Collection Manager",
-    "A simple app to save and share links, notes, and secrets securely",
+    'Parcel | Secure Collection Manager',
+    'A self-hostable, end-to-end encrypted collection manager. Bundle links, notes, and secrets the server can never read',
   )
 
   return (
     <main id="main-content" className="overflow-hidden">
       {/* Hero */}
-      <section className="relative flex min-h-[75svh] flex-col items-center justify-center px-6 text-center">
+      <section className="relative flex min-h-[70svh] flex-col items-center justify-center px-6 text-center">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 -z-10"
@@ -149,17 +163,30 @@ export default function ParcelPage() {
           {...fadeUp}
           whileInView={undefined}
           animate={fadeUp.whileInView}
-          transition={{ ...fadeUp.transition, delay: 0.15 }}
-          className="mt-6 max-w-md text-muted-foreground"
+          transition={{ ...fadeUp.transition, delay: 0.12 }}
+          className="mt-6 inline-flex items-center gap-1.5 rounded-full border border-blue-500/25 bg-blue-500/10 px-3 py-1 text-sm font-medium"
+          style={{ color: PARCEL_BLUE }}
         >
-          A simple app to save and share links, notes, and secrets securely.
+          PrivateBin on Steroids
+        </motion.p>
+
+        <motion.p
+          {...fadeUp}
+          whileInView={undefined}
+          animate={fadeUp.whileInView}
+          transition={{ ...fadeUp.transition, delay: 0.24 }}
+          className="mt-4 max-w-lg text-muted-foreground"
+        >
+          A self-hostable, end-to-end encrypted collection manager. Bundle
+          links, notes, and secrets, save them privately, share them securely.
+          The server <em>never</em> sees your unencrypted data.
         </motion.p>
 
         <motion.div
           {...fadeUp}
           whileInView={undefined}
           animate={fadeUp.whileInView}
-          transition={{ ...fadeUp.transition, delay: 0.3 }}
+          transition={{ ...fadeUp.transition, delay: 0.36 }}
           className="mt-8"
         >
           {githubButton}
@@ -171,7 +198,7 @@ export default function ParcelPage() {
         <EncryptDemo />
       </motion.section>
 
-      {/* Why Parcel */}
+      {/* Features */}
       <motion.section {...fadeUp} className="mx-auto max-w-3xl px-6 py-20">
         <h2 className="mb-8 text-center text-2xl font-semibold tracking-tight">
           Why Parcel?
@@ -191,6 +218,16 @@ export default function ParcelPage() {
             </div>
           ))}
         </div>
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
+          {STACK.map((item) => (
+            <span
+              key={item}
+              className="rounded-full bg-muted px-2.5 py-1 font-mono text-xs text-muted-foreground"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
       </motion.section>
 
       {/* Arcade walkthrough */}
@@ -198,7 +235,7 @@ export default function ParcelPage() {
         <h2 className="mb-6 text-center text-2xl font-semibold tracking-tight">
           See it in action
         </h2>
-        <div className="overflow-hidden rounded-2xl border shadow-xl">
+        <div className="overflow-hidden rounded-2xl shadow-xl">
           <iframe
             src="https://demo.arcade.software/IMI2hsPKpcfxKgA6pZq6?embed&embed_mobile=inline&embed_desktop=inline&show_copy_link=true"
             title="Share Data Securely with PARCEL"
@@ -213,7 +250,9 @@ export default function ParcelPage() {
 
       {/* Closing CTA */}
       <motion.section {...fadeUp} className="flex flex-col items-center gap-6 px-6 pb-28 text-center">
-        <p className="text-lg font-medium">Your links. Your notes. Your keys.</p>
+        <p className="text-lg font-medium">
+          Your links. Your notes. Your keys. Your server.
+        </p>
         {githubButton}
       </motion.section>
     </main>

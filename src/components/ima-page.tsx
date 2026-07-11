@@ -90,7 +90,7 @@ const FADING_TASKS = [
   'Read 5 pages',
 ]
 
-/** A task that lives, drains, and fades — the whole product in one chip. */
+/** A task that lives, drains, and fades. The whole product in one chip. */
 function FadingTask() {
   const [cycle, setCycle] = useState(0)
 
@@ -272,7 +272,7 @@ export default function ImaPage() {
         <p className="mt-6 text-muted-foreground">
           <span className="italic">Ima</span> (いま) comes from Japanese, and
           means <span className="italic">"now."</span> When you create a task,
-          you also choose how long it's worth caring about — hours or days, up
+          you also choose how long it's worth caring about: hours or days, up
           to a maximum of seven. When that time ends, the task disappears.
         </p>
       </motion.section>
@@ -303,7 +303,7 @@ export default function ImaPage() {
         <img
           src={imaPreview}
           alt="Ima app preview"
-          className="w-full rounded-2xl border shadow-xl"
+          className="mx-auto w-full max-w-md rounded-2xl shadow-xl"
         />
       </motion.section>
 
