@@ -1,10 +1,5 @@
 import { useLocation } from "react-router"
 
-/**
- * Static replica of the Website Carbon badge (the live API was flaky).
- * Values measured via websitecarbon.com — update manually after major
- * changes to the site's weight.
- */
 function CarbonBadge() {
   return (
     <div className="flex flex-wrap items-center justify-center gap-y-1.5 text-sm">
