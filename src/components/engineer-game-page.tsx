@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react"
 
+import { usePageMeta } from "@/hooks/use-page-meta"
+
 // Pixel art patterns (8x8 grids, 1 = filled, 0 = transparent)
 const PIXEL_PATTERNS = {
   player: [
@@ -150,6 +152,10 @@ const worldSpeed = (level: number) =>
   Math.min(BASE_SPEED + (level - 1) * SPEED_PER_LEVEL, MAX_SPEED)
 
 export default function EngineerGamePage() {
+  usePageMeta(
+    "Engineer #99 Game | Advaith Krishna A",
+    "A pixel-style endless runner game but for engineers in tech",
+  )
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const stateRef = useRef<GameState>(initialState())
   const phaseRef = useRef<Phase>("idle")

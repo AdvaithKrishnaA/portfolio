@@ -39,7 +39,7 @@ function ScrollToTop() {
 
 function HomePage() {
   return (
-    <main>
+    <main id="main-content">
       <Hero />
       <ProjectsSection />
       <AboutSection />
@@ -50,6 +50,12 @@ function HomePage() {
 function App() {
   return (
     <ThemeProvider defaultTheme="system" storageKey="portfolio-theme">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-md focus:bg-background focus:px-4 focus:py-2 focus:ring-2 focus:ring-ring"
+      >
+        Skip to content
+      </a>
       <ScrollToTop />
       <SiteNav />
       <Suspense fallback={null}>

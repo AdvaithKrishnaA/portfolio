@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Flame } from 'lucide-react'
 import { BurnInfoDialog } from '@/components/burn-info-dialog'
+import { usePageMeta } from "@/hooks/use-page-meta"
 
 function BurnLogo({ className }: { className?: string }) {
     return (
@@ -139,6 +140,10 @@ function Onboarding({ onDone }: { onDone: () => void }) {
 }
 
 export default function BurnPage() {
+  usePageMeta(
+    "Burn | A Simple Way to Release Negative Thoughts",
+    "Burn helps you release negative thoughts — write them down, watch them disappear, and get back to better vibes.",
+  )
   const [phase, setPhase] = useState<Phase>('onboarding')
   const [text, setText] = useState('')
   const [hasVisited, setHasVisited] = useState(false)

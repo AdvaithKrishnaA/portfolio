@@ -1,8 +1,12 @@
 import { Link } from "react-router"
 
+import { usePageMeta } from "@/hooks/use-page-meta"
+
 import { BLOG_POSTS } from "@/data"
 
 export function BlogPage() {
+  usePageMeta("Writing | Advaith Krishna A")
+
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-32 pb-24">
       <h1 className="text-3xl font-semibold tracking-tight">Writing</h1>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import { Lock, LockOpen, Puzzle, Share2, ShieldCheck } from 'lucide-react'
+import { usePageMeta } from "@/hooks/use-page-meta"
 
 function Logo({ className }: { className?: string }) {
   return (
@@ -119,8 +120,13 @@ const githubButton = (
 )
 
 export default function ParcelPage() {
+  usePageMeta(
+    "Parcel | Secure Collection Manager",
+    "A simple app to save and share links, notes, and secrets securely",
+  )
+
   return (
-    <main className="overflow-hidden">
+    <main id="main-content" className="overflow-hidden">
       {/* Hero */}
       <section className="relative flex min-h-[75svh] flex-col items-center justify-center px-6 text-center">
         <div

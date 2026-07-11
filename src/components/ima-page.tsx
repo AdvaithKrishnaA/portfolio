@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { motion } from 'motion/react'
 import { ChevronDown, XIcon } from 'lucide-react'
 import imaPreview from '@/assets/ima-preview.webp'
+import { usePageMeta } from "@/hooks/use-page-meta"
 
 function ImaLogo({ className }: { className?: string }) {
   return (
@@ -167,6 +168,10 @@ const fadeUp = {
 }
 
 export default function ImaPage() {
+  usePageMeta(
+    "Ima | Manage Tasks that Matter",
+    "A quiet macOS app where tasks exist only for the time you decide they deserve",
+  )
   const [showModal, setShowModal] = useState(false)
 
   const handleCloseModal = useCallback(() => setShowModal(false), [])
