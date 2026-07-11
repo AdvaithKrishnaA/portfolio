@@ -3,6 +3,7 @@ import { Navigate, Route, Routes, useLocation } from "react-router"
 
 import { ThemeProvider } from "@/components/theme-provider"
 import { SiteNav } from "@/components/site-nav"
+import { SiteFooter } from "@/components/site-footer"
 import { Hero } from "@/components/hero"
 import { ProjectsSection } from "@/components/projects-section"
 import { AboutSection } from "@/components/about-section"
@@ -70,6 +71,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>
+      <SiteFooter />
     </ThemeProvider>
   )
 }
