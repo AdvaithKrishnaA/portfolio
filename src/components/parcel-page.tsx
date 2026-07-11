@@ -102,15 +102,6 @@ const FEATURES = [
   },
 ]
 
-const STACK = [
-  'AES-GCM 256',
-  'Argon2id',
-  'Cloudflare Workers',
-  'R2',
-  'Self-hostable',
-  'AGPL-3.0',
-]
-
 const fadeUp = {
   initial: { opacity: 0, y: 16, filter: 'blur(6px)' },
   whileInView: { opacity: 1, y: 0, filter: 'blur(0px)' },
@@ -135,14 +126,14 @@ const githubButton = (
 
 export default function ParcelPage() {
   usePageMeta(
-    'Parcel | Secure Collection Manager',
+    'Parcel | PrivateBin on Steroids',
     'A self-hostable, end-to-end encrypted collection manager. Bundle links, notes, and secrets the server can never read',
   )
 
   return (
     <main id="main-content" className="overflow-hidden">
       {/* Hero */}
-      <section className="relative flex min-h-[70svh] flex-col items-center justify-center px-6 text-center">
+      <section className="relative flex min-h-[75svh] flex-col items-center justify-center px-6 text-center">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 -z-10"
@@ -216,16 +207,6 @@ export default function ParcelPage() {
                 {feature.body}
               </p>
             </div>
-          ))}
-        </div>
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
-          {STACK.map((item) => (
-            <span
-              key={item}
-              className="rounded-full bg-muted px-2.5 py-1 font-mono text-xs text-muted-foreground"
-            >
-              {item}
-            </span>
           ))}
         </div>
       </motion.section>
