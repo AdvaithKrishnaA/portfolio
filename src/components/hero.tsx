@@ -40,8 +40,8 @@ export function Hero() {
           variants={item}
           src={avatar}
           alt="Advaith"
-          width={64}
-          height={64}
+          width={96}
+          height={96}
           draggable={false}
           drag
           dragSnapToOrigin
@@ -49,7 +49,7 @@ export function Hero() {
           dragMomentum={false}
           whileHover={{ scale: 1.05, rotate: -2 }}
           whileDrag={{ scale: 1.12, cursor: "grabbing" }}
-          className="inline-block size-11 cursor-grab touch-none rounded-2xl object-cover shadow-sm ring-1 ring-border select-none active:cursor-grabbing sm:size-14 sm:size-16 sm:rounded-3xl"
+          className="inline-block size-20 cursor-grab touch-none rounded-2xl object-cover shadow-sm ring-1 ring-border select-none active:cursor-grabbing sm:size-24 sm:rounded-3xl"
         />
       </motion.h1>
 

@@ -24,13 +24,9 @@ const projects = [
 
 export function SiteNav() {
   const { pathname } = useLocation()
-
-  // Controlled so the dropdown can collapse on client-side navigation,
-  // which does not reload the page and would otherwise leave it open.
   const [openItem, setOpenItem] = useState<string | null>(null)
   const closeMenu = () => setOpenItem(null)
 
-  // Burn is a full-screen immersive experience, so no site chrome.
   if (pathname === "/burn") return null
 
   return (
@@ -40,10 +36,12 @@ export function SiteNav() {
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="fixed inset-x-0 top-4 z-50 mx-auto flex w-fit items-center gap-1 rounded-full border bg-background/70 p-1.5 shadow-lg backdrop-blur-md supports-[backdrop-filter]:bg-background/60"
     >
-      <Avatar className="ml-0.5 size-8">
-        <AvatarImage src={avatar} alt="Advaith" />
-        <AvatarFallback>A</AvatarFallback>
-      </Avatar>
+      {pathname !== "/" && (
+        <Avatar className="ml-0.5 size-8">
+          <AvatarImage src={avatar} alt="Advaith" />
+          <AvatarFallback>Advaith</AvatarFallback>
+        </Avatar>
+      )}
 
       <NavigationMenu value={openItem} onValueChange={setOpenItem}>
         <NavigationMenuList className="gap-0.5">
