@@ -4,7 +4,7 @@ function CarbonBadge() {
   return (
     <div className="flex flex-wrap items-center justify-center gap-y-1.5 text-sm">
       <span className="rounded-l-md border border-r-0 border-border px-2.5 py-1">
-        0.02g of CO<sub>2</sub>/view
+        0.03g of CO<sub>2</sub>/view
       </span>
       <a
         href="https://websitecarbon.com"
@@ -15,7 +15,7 @@ function CarbonBadge() {
         Website Carbon
       </a>
       <span className="ml-3 text-muted-foreground">
-        Cleaner than 96% of pages tested
+        Cleaner than 95% of pages tested
       </span>
     </div>
   )
