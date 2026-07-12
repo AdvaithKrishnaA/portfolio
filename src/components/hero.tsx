@@ -33,9 +33,9 @@ export function Hero() {
     >
       <motion.h1
         variants={item}
-        className="flex flex-wrap items-center justify-start gap-x-4 gap-y-3 text-4xl font-semibold tracking-tight text-balance sm:text-5xl sm:text-6xl"
+        className="flex flex-wrap items-center justify-start gap-x-4 gap-y-3 text-4xl font-semibold tracking-tight text-balance select-none sm:text-5xl sm:text-6xl"
       >
-        <span>Hey, I'm Advaith.</span>
+        <span>Hi,</span>
         <motion.img
           variants={item}
           src={avatar}
@@ -47,17 +47,20 @@ export function Hero() {
           dragSnapToOrigin
           dragElastic={0.5}
           dragMomentum={false}
+          onDragStart={() => document.body.classList.add("select-none")}
+          onDragEnd={() => document.body.classList.remove("select-none")}
           whileHover={{ scale: 1.05, rotate: -2 }}
           whileDrag={{ scale: 1.12, cursor: "grabbing" }}
-          className="inline-block size-20 cursor-grab touch-none rounded-2xl object-cover shadow-sm ring-1 ring-border select-none active:cursor-grabbing sm:size-24 sm:rounded-3xl"
+          className="relative z-20 inline-block size-20 cursor-grab touch-none rounded-2xl object-cover shadow-sm ring-1 ring-border select-none active:cursor-grabbing sm:size-24 sm:rounded-3xl"
         />
+        <span>I'm Advaith!</span>
       </motion.h1>
 
       <motion.p
         variants={item}
         className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed sm:text-xl"
       >
-        Compulsive Product Builder. <br /> Ex-Quizzer. Cinephile.
+        Compulsive Product Builder, <br /> Cinephile & Former Quizzer.
       </motion.p>
 
       <motion.div
