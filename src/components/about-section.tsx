@@ -8,7 +8,7 @@ const FACTS = [
 export function AboutSection() {
   return (
     <section id="about" className="mx-auto w-full max-w-3xl px-6 pb-24">
-      <h2 className="mb-8 text-left sm:text-center text-2xl font-semibold tracking-tight">
+      <h2 className="mb-8 text-center text-2xl font-semibold tracking-tight">
         More About Me
       </h2>
       <ul className="mx-auto max-w-sm space-y-3 text-muted-foreground">

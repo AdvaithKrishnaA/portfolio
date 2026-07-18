@@ -28,7 +28,7 @@ const socials: Social[] = [
 
 export function SocialLinks() {
   return (
-    <div className="flex flex-wrap items-center justify-start gap-2 md:justify-center">
+    <div className="flex flex-wrap items-center justify-center gap-2">
       {socials.map((social) => (
         <motion.a
           key={social.label}

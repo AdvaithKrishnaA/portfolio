@@ -29,11 +29,11 @@ export function Hero() {
       variants={container}
       initial="hidden"
       animate="visible"
-      className="mx-auto flex sm:min-h-[min(75svh,680px)] max-w-3xl flex-col items-start justify-center px-6 py-12 pt-30 text-left sm:items-center sm:text-center"
+      className="mx-auto flex sm:min-h-[min(75svh,680px)] max-w-3xl flex-col items-center justify-center px-6 py-12 pt-30 text-center"
     >
       <motion.h1
         variants={item}
-        className="flex flex-wrap items-center justify-start gap-x-4 gap-y-3 text-4xl font-semibold tracking-tight text-balance select-none sm:text-5xl sm:text-6xl"
+        className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3 text-4xl font-semibold tracking-tight text-balance select-none sm:text-5xl sm:text-6xl"
       >
         <span>Hi,</span>
         <motion.img
@@ -65,7 +65,7 @@ export function Hero() {
 
       <motion.div
         variants={item}
-        className="mt-5 flex flex-wrap items-center justify-start gap-2 sm:justify-center"
+        className="mt-5 flex flex-wrap items-center justify-center gap-2"
       >
         <Badge
           variant="outline"

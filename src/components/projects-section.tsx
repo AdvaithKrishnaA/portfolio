@@ -148,7 +148,7 @@ export function ProjectsSection() {
     >
       <motion.div
         variants={entranceItem}
-        className="mb-8 flex items-center justify-start gap-3 sm:justify-center"
+        className="mb-8 flex items-center justify-center gap-3"
       >
         <h2
           ref={sentinelRef}
