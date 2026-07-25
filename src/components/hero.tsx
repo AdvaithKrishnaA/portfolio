@@ -33,7 +33,7 @@ export function Hero() {
     >
       <motion.h1
         variants={item}
-        className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3 text-4xl font-semibold tracking-tight text-balance select-none sm:text-5xl sm:text-6xl"
+        className="shimmer shimmer-color-blue-500/60 shimmer-duration-2500 shimmer-once flex flex-wrap items-center justify-center gap-x-4 gap-y-3 text-4xl font-semibold tracking-tight text-balance select-none sm:text-5xl sm:text-6xl"
       >
         <span>Hi,</span>
         <motion.img
