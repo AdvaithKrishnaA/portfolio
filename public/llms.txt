@@ -1,0 +1,38 @@
+# Advaith Krishna A
+
+> Personal site of Advaith Krishna A: compulsive product builder, cinephile and
+> former quizzer. The site collects side projects and essays on behavioral
+> economics and product thinking.
+
+This is a static site. There is no public API. The machine-readable resources
+below are the complete set of structured data the site publishes, and they are
+also listed in the API catalog at /.well-known/api-catalog.
+
+## Pages
+
+- [Home](https://meetadvaith.com/): Intro, project index and contact links.
+- [Blog](https://meetadvaith.com/blog): Essays on behavioral economics and decision making.
+- [Parcel](https://meetadvaith.com/parcel): Self-hostable, end-to-end encrypted collection manager.
+- [Burn](https://meetadvaith.com/burn): Write down negative thoughts and watch them disappear.
+- [Ima](https://meetadvaith.com/ima): macOS menu bar app where tasks expire on a timer you set.
+- [Engineer #099](https://meetadvaith.com/engineer-game): Pixel-style endless runner for engineers.
+
+## Writing
+
+- [The Behavioral Economics of Love](https://meetadvaith.com/blog/the-behavioral-economics-of-love): Why our choices in love aren't always rational.
+- [The Behavioral Economics of Holiday Decision Making](https://meetadvaith.com/blog/the-behavioral-economics-of-christmas): Gift waste, secret santas and sale-induced overspending.
+- [Anchored Down: Psychology of Coupon Use](https://meetadvaith.com/blog/the-psychology-of-coupon-use): Why coupons hook us beyond the money saved.
+- [Bad Arguments and Bogus Logic](https://meetadvaith.com/blog/bad-arguments-and-bogus-logic-navigating-logical-fallacies): Common logical fallacies and how they shape reasoning.
+
+## Machine-readable
+
+- [API catalog](https://meetadvaith.com/.well-known/api-catalog): RFC 9727 linkset of these resources.
+- [Structured description](https://meetadvaith.com/about.jsonld): Schema.org Person and WebSite JSON-LD.
+- [Sitemap](https://meetadvaith.com/sitemap.xml): All public pages.
+- [robots.txt](https://meetadvaith.com/robots.txt): Crawl rules.
+
+## Optional
+
+- [High On Product](https://highonproduct.com): Initiative to help crack entry level product interviews.
+- [Parcel source](https://github.com/AdvaithKrishnaA/parcel): Source code for Parcel.
+- [Contact](mailto:meetadvaith@duck.com): Email. Case studies are available on request.

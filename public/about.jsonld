@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://meetadvaith.com/#website",
+      "url": "https://meetadvaith.com/",
+      "name": "Advaith Krishna A",
+      "description": "Personal website of Advaith Krishna A",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://meetadvaith.com/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://meetadvaith.com/#person",
+      "name": "Advaith Krishna A",
+      "alternateName": "Advaith",
+      "url": "https://meetadvaith.com/",
+      "email": "mailto:meetadvaith@duck.com",
+      "description": "Compulsive product builder, cinephile and former quizzer.",
+      "knowsAbout": [
+        "Product management",
+        "Behavioral economics",
+        "Web engineering"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/advaithkrishnaa",
+        "https://letterboxd.com/meetadvaith/",
+        "https://github.com/AdvaithKrishnaA"
+      ]
+    }
+  ]
+}

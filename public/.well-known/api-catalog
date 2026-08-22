@@ -1,0 +1,42 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://meetadvaith.com/.well-known/api-catalog",
+      "item": [
+        { "href": "https://meetadvaith.com/llms.txt" },
+        { "href": "https://meetadvaith.com/about.jsonld" },
+        { "href": "https://meetadvaith.com/sitemap.xml" }
+      ]
+    },
+    {
+      "anchor": "https://meetadvaith.com/llms.txt",
+      "service-doc": [
+        {
+          "href": "https://meetadvaith.com/llms.txt",
+          "type": "text/markdown",
+          "title": "Site guide for agents and LLMs"
+        }
+      ]
+    },
+    {
+      "anchor": "https://meetadvaith.com/about.jsonld",
+      "describedby": [
+        {
+          "href": "https://meetadvaith.com/about.jsonld",
+          "type": "application/ld+json",
+          "title": "Schema.org description of the site and its author"
+        }
+      ]
+    },
+    {
+      "anchor": "https://meetadvaith.com/sitemap.xml",
+      "describedby": [
+        {
+          "href": "https://meetadvaith.com/sitemap.xml",
+          "type": "application/xml",
+          "title": "Sitemap of all public pages"
+        }
+      ]
+    }
+  ]
+}

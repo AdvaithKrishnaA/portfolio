@@ -1,0 +1,24 @@
+# Cloudflare static-asset response headers.
+# Applied by the asset layer, so these cost no Worker invocations.
+# Docs: https://developers.cloudflare.com/workers/static-assets/headers/
+
+# Agent discovery on the homepage (RFC 8288 Link header, RFC 9727 api-catalog).
+/
+  Link: </.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json"
+  Link: </llms.txt>; rel="service-doc"; type="text/markdown"
+  Link: </about.jsonld>; rel="describedby"; type="application/ld+json"
+
+/index.html
+  Link: </.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json"
+  Link: </llms.txt>; rel="service-doc"; type="text/markdown"
+  Link: </about.jsonld>; rel="describedby"; type="application/ld+json"
+
+# Extensionless and uncommon-extension assets need explicit content types.
+/.well-known/api-catalog
+  Content-Type: application/linkset+json; profile="https://www.rfc-editor.org/info/rfc9727"
+
+/about.jsonld
+  Content-Type: application/ld+json; charset=utf-8
+
+/llms.txt
+  Content-Type: text/markdown; charset=utf-8
